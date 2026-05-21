@@ -1,0 +1,80 @@
+/* From Uiverse.io by Creatlydev */ 
+.light-dark-container{
+    display: flex;
+    margin-right: 5px;
+    
+}
+.toggle {
+  
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 25%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  
+}
+
+.input {
+  display: none;
+}
+
+.icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+  line-height: 0.1;
+}
+
+.icon--moon {
+  transition-delay: 200ms;
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+  
+}
+
+#switch:checked ~ .icon--sun {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
+
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #000000;
+
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #f3f4f6;
+    --border-color: #f3f4f6;
+
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  .logo-description, .container, .header-description, 
+  .main-description, .links, .paragraph-description, 
+  .link-item {
+  border: 1px solid var(--border-color);
+}
+  
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
