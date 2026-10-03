@@ -1,0 +1,41 @@
+.huskey-svg {
+    width: 25px;
+    flex: 0 0 25px;
+}
+
+.huskey-svg svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.webring-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.webring-arrow {
+    color: #333;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.webring-arrow:hover {
+    color: #cc1042;
+    transform: translateY(-2px);
+}
+
+.webring-arrow:focus-visible {
+    outline: 3px solid #cc1042;
+    outline-offset: 3px;
+}
+
+.webring-arrow[aria-disabled="true"] {
+    opacity: 0.4;
+    pointer-events: none;    
+}
